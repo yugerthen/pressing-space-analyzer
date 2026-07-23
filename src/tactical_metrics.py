@@ -19,7 +19,7 @@ def compute_metrics(team_points):
     results = {}
     for team, points in team_points.items():
         pts = np.array(points)
-        if len(pts) < 3:
+        if len(pts) < 5:
             continue
         hull = cv2.convexHull(pts)
         area = cv2.contourArea(hull)
